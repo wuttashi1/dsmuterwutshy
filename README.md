@@ -2,36 +2,36 @@
 
 # Wutshy Voice Control
 
-Discord-бот с панелью управления голосовым каналом: массовое отключение и включение микрофонов для администраторов.
+Discord voice-channel control panel with administrator-only Mute All and Unmute All actions.
 
-[Правила разработки](CONTRIBUTING.md) · [Ветки](https://github.com/wuttashi1/dsmuterwutshy/branches)
+[Contributing](CONTRIBUTING.md) · [Branches](https://github.com/wuttashi1/dsmuterwutshy/branches)
 
 </div>
 
 ---
 
-## Возможности
+## Features
 
-- Slash-команда `/voicecontrol`.
-- Кнопки **Mute All** и **Unmute All** для текущего голосового канала.
-- Проверка прав администратора перед управлением участниками.
+- `/voicecontrol` slash command.
+- **Mute All** and **Unmute All** buttons for the current voice channel.
+- Administrator permission checks before controlling members.
 
-## Запуск
+## Quick start
+
+Create and activate a Python virtual environment, then:
 
 ```bash
-python -m venv .venv
-# Активируйте .venv для вашей оболочки
 python -m pip install -r requirements.txt
 python main.py
 ```
 
-Перед запуском создайте локальный `.env` с `DISCORD_TOKEN`. В Discord Developer Portal включите Server Members Intent; при добавлении бота предоставьте доступ к slash-командам и право отключать микрофоны участников.
+Before starting, create a local `.env` with `DISCORD_TOKEN`. Enable Server Members Intent in the Discord Developer Portal. Invite the bot with application command access and permission to mute members.
 
-## Навигация
+## Project layout
 
-- `main.py` — запуск и регистрация `/voicecontrol`.
-- `voice_control_view.py` — кнопки и обработчики панели.
+- `main.py` — startup and slash command registration.
+- `voice_control_view.py` — panel buttons and action handlers.
 
-## Разработка
+## Development
 
-Соглашения по веткам и изменениям: [CONTRIBUTING.md](CONTRIBUTING.md).
+See [CONTRIBUTING.md](CONTRIBUTING.md) for branch and contribution guidelines.
